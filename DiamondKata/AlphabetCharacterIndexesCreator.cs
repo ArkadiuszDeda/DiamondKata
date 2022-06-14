@@ -10,14 +10,7 @@
 
             for (char letter = 'A'; letter <= 'Z'; letter++)
             {
-                if (index < 2)
-                {
-                    spaceBetween = index;
-                } 
-                else
-                {
-                    spaceBetween += 2;
-                }
+                spaceBetween = CalculateNewSpaceBetween(index, spaceBetween);
 
                 characterIndexes.Add(letter, new CharacterInformation(letter, index, spaceBetween));
                 index++;
@@ -25,20 +18,19 @@
 
             return characterIndexes;
         }
-    }
 
-    public class CharacterInformation
-    {
-        public CharacterInformation(char character, int index, int spaceBetween)
+        private static int CalculateNewSpaceBetween(int index, int spaceBetween)
         {
-            Character = character;
-            Index = index;
-            SpaceBetween = spaceBetween;
+            if (index < 2)
+            {
+                spaceBetween = index;
+            }
+            else
+            {
+                spaceBetween += 2;
+            }
+
+            return spaceBetween;
         }
-
-        public char Character { get; }
-        public int Index { get; }
-        public int SpaceBetween { get; }
-
     }
 }

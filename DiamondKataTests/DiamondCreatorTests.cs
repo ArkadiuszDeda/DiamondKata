@@ -8,7 +8,7 @@ namespace DiamondKataTests
 
         public DiamondCreatorTests()
         {
-            sut = new DiamondCreator(new AlphabetCharacterIndexesCreator());
+            sut = new DiamondCreator(new AlphabetCharacterIndexesCreator(), new DiamondLevelCreator());
         }
 
         [Fact]
