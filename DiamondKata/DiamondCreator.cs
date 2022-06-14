@@ -4,7 +4,7 @@ namespace DiamondKata
 {
     public class DiamondCreator
     {
-        readonly Dictionary<char, CharacterInformation> characterIndexes;
+        private readonly Dictionary<char, CharacterInformation> characterIndexes;
         private readonly IDiamondLevelCreator diamondLevelCreator;
 
         public DiamondCreator(IAlphabetCharacterIndexesCreator diamondCharacterPositionsCreator, IDiamondLevelCreator diamondLevelCreator)
