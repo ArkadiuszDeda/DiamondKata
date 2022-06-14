@@ -66,5 +66,26 @@ D     D
 
             Assert.Equal(expected, diamond);
         }
+
+
+        [Fact]
+        public void Create_E_ReturnsExpectedDiamond()
+        {
+            var expected =
+@"    A
+   B B
+  C   C
+ D     D
+E       E
+ D     D
+  C   C
+   B B
+    A
+";
+            var diamond = sut.Create('E');
+
+            Assert.Equal(expected, diamond);
+        }
+
     }
 }
